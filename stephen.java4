@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class StudentManagementApp {
+
+    public static void main(String[] args) {
+
+        // Create Course object
+        Course course1 = new Course("OOSD101", "Object Oriented Software Design");
+
+        // Create Student objects
+        Student student1 = new Student(1, "stephen", 65, course1);
+        Student student2 = new Student(2, "lilly", 86, course1);
+        Student student3 = new Student(3, "Catherine", 45, course1);
+
+        // Store students in ArrayList
+        ArrayList<Student> studentList = new ArrayList<>();
+        studentList.add(student1);
+        studentList.add(student2);
+        studentList.add(student3);
+
+        // Display student details
+        System.out.println("===== STUDENT MANAGEMENT SYSTEM =====");
+
+        for (Student s : studentList) {
+            s.displayDetails();   // Polymorphism in action
+        }
+    }
+}
